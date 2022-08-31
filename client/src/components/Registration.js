@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 function Registration () {
-
-    let [username, setUsername] = useState('');
 
     function handleSubmit (e) {
         e.preventDefault();
@@ -19,7 +17,7 @@ function Registration () {
     return (
         <div className="container additional-styles">
             <form onSubmit={handleSubmit}>
-                <input name="username" value={username} onChange={e => setUsername(e.target.value)} placeholder="Username" />
+                <input name="username" placeholder="Username" />
                 <input name="password" type="password" placeholder="Password" />
                 <input name="repeatedPassword" type="password" placeholder="Repeat password" />
                 <div className="checkBox"> <input name="tosAgreement" type="checkbox" /> <Link to="/tos">I agree with ToS</Link> </div>
